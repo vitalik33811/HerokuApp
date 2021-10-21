@@ -21,15 +21,10 @@ public class HerokuAppTestTypos {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://the-internet.herokuapp.com/typos");
-
         String addElement = driver.findElement(By.cssSelector("div > p:nth-of-type(1)")).getText();
-        System.out.println(addElement);
-        String addElement1 = driver.findElement(By.cssSelector("div > p:nth-of-type(2)")).getText();
-        System.out.println(addElement1);
-
         Assert.assertEquals(addElement, "This example demonstrates a typo being introduced. It does it randomly on each page load.");
+        String addElement1 = driver.findElement(By.cssSelector("div > p:nth-of-type(2)")).getText();
         Assert.assertEquals(addElement1, "Sometimes you'll see a typo, other times you won't.");
-
         driver.quit();
     }
 }
