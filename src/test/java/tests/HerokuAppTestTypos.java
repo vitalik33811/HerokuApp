@@ -23,8 +23,8 @@ public class HerokuAppTestTypos {
         driver.get("http://the-internet.herokuapp.com/typos");
         String textFromElement = driver.findElement(By.cssSelector("div > p:nth-of-type(1)")).getText();
         Assert.assertEquals(textFromElement, "This example demonstrates a typo being introduced. It does it randomly on each page load.");
-        String textFromElement1 = driver.findElement(By.cssSelector("div > p:nth-of-type(2)")).getText();
-        Assert.assertEquals(textFromElement1, "Sometimes you'll see a typo, other times you won't.");
+        String textFromElementOne = driver.findElement(By.cssSelector("div > p:nth-of-type(2)")).getText();
+        Assert.assertEquals(textFromElementOne, "Sometimes you'll see a typo, other times you won't.");
         driver.quit();
     }
 }
