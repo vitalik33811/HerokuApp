@@ -28,8 +28,8 @@ public class HerokuAppTestAddRemoveElements {
         }
         WebElement deleteElementButton = driver.findElement(By.className("added-manually"));
         deleteElementButton.click();
-        int count = driver.findElements(By.className("added-manually")).size();
-        Assert.assertEquals(count, 1);
+        int addedButtonsCount = driver.findElements(By.className("added-manually")).size();
+        Assert.assertEquals(addedButtonsCount, 1);
         driver.quit();
     }
 }
