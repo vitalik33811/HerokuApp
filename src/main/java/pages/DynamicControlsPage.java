@@ -37,15 +37,15 @@ public class DynamicControlsPage extends BasePage {
         return driver.findElement(TEXT_REMOVE).getText();
     }
 
-    public boolean сheckCheckbox() {
-        return driver.findElements(CHECKBOX_BUTTON).size() < 1;
+    public boolean isCheckoxButtonPresent() {
+        return driver.findElements(CHECKBOX_BUTTON).size() > 0;
     }
 
-    public boolean inputDisplayed() {
+    public boolean isInputDisplayed() {
         return driver.findElement(INPUT_BUTTON).isDisplayed();
     }
 
-    public boolean inputEnabled() {
+    public boolean isInputEnabled() {
         return driver.findElement(INPUT_BUTTON).isEnabled();
     }
 
@@ -54,7 +54,7 @@ public class DynamicControlsPage extends BasePage {
         waitForElementIsLocated(TEXT_REMOVE, 10);
     }
 
-    public String buttonOnName() {
+    public String getButtonName() {
         return driver.findElement(ENABLE_BUTTON).getText();
     }
 }

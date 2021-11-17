@@ -22,7 +22,7 @@ public class FramesPage extends BasePage {
         driver.findElement(IFRAME_BUTTON).click();
     }
 
-    public String iFrameBoxText() {
+    public String getIFrameBoxText() {
         driver.switchTo().frame(driver.findElement(IFRAME));
         waitForElementIsLocated(IFRAME_TEXT, 5);
         return driver.findElement(IFRAME_TEXT).getText();

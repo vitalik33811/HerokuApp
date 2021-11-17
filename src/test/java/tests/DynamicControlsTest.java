@@ -27,29 +27,29 @@ public class DynamicControlsTest extends BaseTests{
     public void checkCheckboxNotDisplayedAfterRemoveBtnClickTest() {
         dynamicControlsPage.openPage();
         dynamicControlsPage.clickRemoveButton();
-        Assert.assertTrue(dynamicControlsPage.сheckCheckbox());
+        Assert.assertTrue(dynamicControlsPage.isCheckoxButtonPresent());
     }
     @Test
     public void displayedInputTest() {
         dynamicControlsPage.openPage();
-        Assert.assertTrue(dynamicControlsPage.inputDisplayed());
+        Assert.assertTrue(dynamicControlsPage.isInputDisplayed());
     }
     @Test
     public void checkInputIsDisabledTest() {
         dynamicControlsPage.openPage();
-        Assert.assertFalse(dynamicControlsPage.inputEnabled());
+        Assert.assertFalse(dynamicControlsPage.isInputEnabled());
     }
     @Test
     public void checkMessageInputTest() {
         dynamicControlsPage.openPage();
         dynamicControlsPage.clickEnableButton();
         Assert.assertEquals(dynamicControlsPage.getTextAfterClick(), TEXT_UNDER_INPUT);
-        Assert.assertEquals(dynamicControlsPage.buttonOnName(), ENABLE_BUTTON_NAME_AFTER_CLICK);
+        Assert.assertEquals(dynamicControlsPage.getButtonName(), ENABLE_BUTTON_NAME_AFTER_CLICK);
     }
     @Test
     public void checkInputIsEnabledTest() {
         dynamicControlsPage.openPage();
-        Assert.assertFalse(dynamicControlsPage.inputEnabled());
+        Assert.assertFalse(dynamicControlsPage.isInputEnabled());
     }
 
 }

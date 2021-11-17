@@ -8,9 +8,9 @@ public class FramesTest extends BaseTests {
     private static final String GET_TEXT = "Your content goes here.";
 
     @Test
-    public void iFrame() {
+    public void iFrameTest() {
         framesPage.openPage();
         framesPage.openIframe();
-        Assert.assertEquals(framesPage.iFrameBoxText(), GET_TEXT);
+        Assert.assertEquals(framesPage.getIFrameBoxText(), GET_TEXT);
     }
 }

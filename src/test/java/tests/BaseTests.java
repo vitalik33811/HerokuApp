@@ -23,12 +23,10 @@ public class BaseTests {
         dynamicControlsPage = new DynamicControlsPage(driver);
         fileUploadPage = new FileUploadPage(driver);
         framesPage = new FramesPage(driver);
-
     }
 
     @AfterMethod
     public void closeDriver() {
-
         driver.quit();
     }
 }

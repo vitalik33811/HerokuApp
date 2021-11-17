@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ContextMenuTest extends BaseTests {
@@ -11,6 +12,7 @@ public class ContextMenuTest extends BaseTests {
         contextMenuPage.openPage();
         contextMenuPage.rightClickHotSpot();
         contextMenuPage.getAlertText();
+        Assert.assertEquals(contextMenuPage.getAlertText(), ALERT_TEXT);
         contextMenuPage.closeAlert();
     }
 }
